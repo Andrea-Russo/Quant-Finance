@@ -4,7 +4,13 @@ Welcome to the Quantitative Finance Repository! This repository is dedicated to 
 
 ## What is Quantitative Finance?
 
-Quantitative finance involves the use of mathematical models and computational algorithms to analyze financial markets and securities. It combines the disciplines of finance, mathematics, and computer science to predict market behaviors and develop financial strategies.
+Quantitative finance involves using mathematical models and computational algorithms to analyze financial markets and securities. It combines the disciplines of finance, mathematics, and computer science to predict market behaviours and develop financial strategies.
+
+## Disclaimer
+
+Most of what is in here is just for my practice purposes. Do not expect to find perfectly optimised and commented programs, even if I like to keep things tidy and organised. There is room for improvement in each of the programs, and I might update them here and there from time to time.
+
+Also, I am open to collaborations. Do not hesitate to contact me if you want to explore ideas together.
 
 ## Repository Contents
 
