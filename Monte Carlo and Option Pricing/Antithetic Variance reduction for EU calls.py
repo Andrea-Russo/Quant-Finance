@@ -8,8 +8,11 @@ anthitetic variates reduce the variance of the Montecarlo simulation.
 
 If we are trying to estimate the variable Y and we simulate using the random variable X, 
 the estimate will have Var(Y) = Var(X).
-However, if we extimate by Y = (X1 + X2)/2, Var(Y) = (Var(X1) + Var(X2) + 2COV(X1,X2))/4.
+However, if we extimate by Y = (X1 + X2)/2, Var(Y) = (Var(X1) + Var(X2) + 2COV(X1,X2)) /4.
 If X1 and X2 are negatively correlated, the variance will be smaller than just using a single variable.
+
+In particular, if X2=-X1, then <Y>=0 (so we preserve the expectation of X1 since we are using it on gaussian noise)
+and Var(Y)= 0.5*Var(X1) - 0.5*Var(X1) = 0
 """
 # Numerics
 import numpy as np
