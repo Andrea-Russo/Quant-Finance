@@ -11,8 +11,7 @@ the estimate will have Var(Y) = Var(X).
 However, if we extimate by Y = (X1 + X2)/2, Var(Y) = (Var(X1) + Var(X2) + 2COV(X1,X2)) /4.
 If X1 and X2 are negatively correlated, the variance will be smaller than just using a single variable.
 
-In particular, if X2=-X1, then <Y>=0 (so we preserve the expectation of X1 since we are using it on gaussian noise)
-and Var(Y)= 0.5*Var(X1) - 0.5*Var(X1) = 0
+In particular, if X2=-X1, then <Y>=0 and Var(Y)= 0.5*Var(X1) - 0.5*Var(X1) = 0
 """
 # Numerics
 import numpy as np
