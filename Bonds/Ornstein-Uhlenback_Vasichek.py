@@ -31,11 +31,13 @@ import matplotlib.pyplot as plt
 #%% Monte Carlo simulation of Ornstein-Uhlenback process
 
 # Ornstein-Uhlenback parameters
-mu = 0.02
-theta = 0.01
-vol = 0.05
-x0 = 0.06
-T = 2
+
+
+mu = float(input('Insert rate mean: '))           # drift
+theta = float(input('Insert rate mean reversion speed: '))
+vol = float(input('Insert rate volatility: '))     # volatility
+r0 = float(input('Inseert rate initial value: '))        # Initial price
+T = float(input('Insert time of simulation in years: '))   # Time horizon, in years
 
 # Number of different simulations
 iterations = 1000
@@ -70,7 +72,7 @@ def Ornst_Uhl_Monte_Carlo(mu, theta, vol, x0, T, iterations):
     return x, t
 
 # We use r as it will be later considered an interest rate    
-r, t = Ornst_Uhl_Monte_Carlo(mu, theta, vol, x0, T, iterations)
+r, t = Ornst_Uhl_Monte_Carlo(mu, theta, vol, r0, T, iterations)
 
 plt.figure(figsize=(16,7))
 for i in range(iterations):
@@ -82,8 +84,13 @@ plt.title(f"Value of process after {T:.2f} years")
 plt.grid(True)
 plt.show()
 
+# Compute final time mean
+average = np.mean(r, axis=0)
+variance = np.var(r, axis=0)
+print(f"The final average value of the process is {average[-1]:.2f}")
+print(f"The final variance of the process is {variance[-1]:.3f}")
 
-#%%
+#%% Zero-coupon bond pricing
 """
 In finance, the Vasicek model is a mathematical model describing the evolution of interest rates. 
 It is a type of one-factor short-rate model as it describes interest rate movements as driven by only one source of market risk. 
