@@ -29,16 +29,15 @@ def MonteCarlo(mu, vol, S0, T, iterations):
     t = np.linspace(0, steps, num=steps)
     
     # Generate random numbers
-    W = [rnd.randn(steps) for _ in range(iterations)]
+    W = rnd.randn(iterations, steps)
     
     # Simulate stock price
-    S = [np.empty(steps) for _ in range(iterations)]
+    S = np.empty((iterations, steps))
     
     # The sumlations are computed in a vectorised way
     for i in range(iterations):
         S[i][0] = S0
         S[i][1:] = S0 * np.exp(np.cumsum((mu - 0.5 * vol**2) * dt + vol * np.sqrt(dt) * W[i])[1:])
-    
     return S, t
 
 S, t = MonteCarlo(mu, vol, S0, T, iterations)
@@ -49,6 +48,6 @@ for i in range(iterations):
 
 plt.xlabel('Time')
 plt.ylabel('Price')
-plt.title(f"Price of Stock after {T} years")
+plt.title(f"Price of Stock after {T:.2f} years")
 plt.grid(True)
 plt.show()
