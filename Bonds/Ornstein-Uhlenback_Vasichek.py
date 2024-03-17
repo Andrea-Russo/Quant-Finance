@@ -1,11 +1,11 @@
 """
-Ornstein–Uhlenbeck process and the Vasichek model of interest rates
+Ornstein-Uhlenbeck process and the Vasichek model of interest rates
 
-In mathematics, the Ornstein–Uhlenbeck process is a stochastic process. 
+In mathematics, the Ornstein-Uhlenbeck process is a stochastic process. 
 Its original application in physics was as a model for the velocity of a massive
 Brownian particle under the influence of friction.
 
-The Ornstein–Uhlenbeck process is a STATIONARY Gauss–Markov process,
+The Ornstein-Uhlenbeck process is a STATIONARY Gauss–Markov process,
 which means that it is a GAUSSIAN process, a MARKOV process, and is temporally homogeneous.
 In fact, it is the ONLY nontrivial process that satisfies these three conditions,
 up to allowing linear transformations of the space and time variables. 
@@ -18,7 +18,7 @@ in which the properties of the process have been changed so that there is a tend
 of the walk to move back towards a central location, 
 with a greater attraction when the process is further away from the center.
 
-The Ornstein–Uhlenbeck process can also be considered as the continuous-time 
+The Ornstein-Uhlenbeck process can also be considered as the continuous-time 
 analogue of the discrete-time AR(1) process
 """
 
