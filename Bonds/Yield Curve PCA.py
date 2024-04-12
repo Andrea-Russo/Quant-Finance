@@ -13,15 +13,6 @@ import pandas as pd
 # Visualisation
 import matplotlib.pyplot as plt
 
-# Plot settings
-import cufflinks as cf
-cf.set_config_file(offline=True)
-
-# scikit
-from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import StandardScaler
-from sklearn.decomposition import PCA
-
 #%% Data upload and manipulation
 
 data = pd.read_csv('hjm-pca.txt', index_col=0, sep='\t')
